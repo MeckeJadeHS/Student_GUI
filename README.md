@@ -1,2 +1,4 @@
 # Student_GUI
-Graphische Oberfläche für die Verwaltung vo Studenteninformationen aus der Vorlesung
+Hochsprachenprogrammierung WiSe 2019/2020
+Kai Mecke
+Graphische Oberfläche für die Verwaltung von Studierendeninformationen aus der Vorlesung.
