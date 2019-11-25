@@ -57,6 +57,12 @@ namespace Student_GUI
             // Schaltet die Sichtbarkeit des Meer Grid an und MB ab
             grid_MB.Visibility = Visibility.Hidden;
             grid_meer.Visibility = Visibility.Visible;
+
+            // Mit dieser Type Umwandlung machen wir das sender - Objekt als TreeViewItem-Objekt nutzbar:
+            TreeViewItem tvi = (TreeViewItem)sender;
+
+            // Nun können wir auf die "Header" Eigenschaft des tvi zugreifen und über das Test Label (lab_testLabel) ausgeben:
+            lab_testLabel.Content = tvi.Header;
         }
 
         /// <summary>
@@ -68,10 +74,43 @@ namespace Student_GUI
         private void btn_Berechne_Click(object sender, RoutedEventArgs e)
         {
             // Mit dieser Type Umwandlung machen wir das TreeViewItem als Objekt nutzbar:
-            TreeViewItem tvi = (TreeViewItem)trv_Auswahl.SelectedItem;
+            TreeViewItem tviSelected = (TreeViewItem)trv_Auswahl.SelectedItem;
 
             // Nun können wir auf die "Header" Eigenschaft des tvi zugreifen und über das Test Label (lab_testLabel) ausgeben:
-            lab_testLabel.Content = tvi.Header;
+            lab_testLabel.Content = tviSelected.Header;
         }
+
+        private void tb_schuhgr_LostFocus(object sender, RoutedEventArgs e)
+        {
+            Double result = getNumericValue(sender);
+        }
+
+        private void tb_schuhgr_KeyDown(object sender, KeyEventArgs e)
+        {
+            /// if enter gedrückt
+            Double result = getNumericValue(sender);
+        }
+
+        private double getNumericValue(object sender)
+        {
+            TextBox tb = (TextBox)sender;
+            String text = tb.Text;
+
+            Double res;
+            Double.TryParse(text, out res);
+            if (Double.TryParse(text, out res))
+            {
+                // alles gut
+                tb.Background = Brushes.LightGreen;
+            }
+            else
+            {
+                // Kein Zahl - Problem
+                tb.Background = Brushes.OrangeRed;
+                // MessageBox.Show("Keine Zahl - bitte neue Eingabe: " + text);
+            }
+            return res;
+        }
+
     }
 }

@@ -16,7 +16,8 @@
             <TreeViewItem Header="Student">
                 <TreeViewItem x:Name="tvi_MB" Header="MB" Selected="tvi_MB_Selected"/>
                 <TreeViewItem x:Name="tvi_meer" Header="Meer" Selected="tvi_meer_Selected"/>
-                <TreeViewItem Header="Med"/>
+                <TreeViewItem Header="Med"></TreeViewItem>
+                <TreeViewItem Header="Med2"/>
             </TreeViewItem>
             <TreeViewItem Header="Prof">
                 <TreeViewItem Header="MB"/>
@@ -25,20 +26,20 @@
             </TreeViewItem>
         </TreeView>
         <!-- Als nächstes das Grid für MB, welches über die Visibility ein und aus geschaltet werden kann -->
-        <Grid x:Name="grid_MB" HorizontalAlignment="Left" Height="190" Margin="155,92,0,0" VerticalAlignment="Top" Width="337" Visibility="Visible">
+        <Grid x:Name="grid_MB" HorizontalAlignment="Left" Height="190" Margin="155,92,0,0" VerticalAlignment="Top" Width="337" Visibility="Hidden">
             <Label Content="Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="53"/>
             <TextBox HorizontalAlignment="Left" Height="23" Margin="68,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="80"/>
             <Label Content="MatNr" HorizontalAlignment="Left" Margin="166,7,0,0" VerticalAlignment="Top"/>
             <TextBox HorizontalAlignment="Left" Height="23" Margin="247,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="80"/>
         </Grid>
         <!-- Als nächstes das Grid für Meer, welches über die Visibility ein und aus geschaltet werden kann -->
-        <Grid x:Name="grid_meer" HorizontalAlignment="Left" Height="190" Margin="155,92,0,0" VerticalAlignment="Top" Width="337" Visibility="Hidden">
+        <Grid x:Name="grid_meer" HorizontalAlignment="Left" Height="190" Margin="155,92,0,0" VerticalAlignment="Top" Width="337" Visibility="Visible">
             <Label Content="Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="53"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="68,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="80"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="68,10,0,0" TextWrapping="Wrap" Text="Heiner" VerticalAlignment="Top" Width="80"/>
             <Label Content="MatNr" HorizontalAlignment="Left" Margin="166,7,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="247,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="80"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="247,10,0,0" TextWrapping="Wrap" Text="600452" VerticalAlignment="Top" Width="80"/>
             <Label Content="Schuhgr" HorizontalAlignment="Left" Margin="166,48,0,0" VerticalAlignment="Top" Width="53"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="247,48,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_schuhgr" HorizontalAlignment="Left" Height="23" Margin="247,48,0,0" TextWrapping="Wrap" Text="42,0" VerticalAlignment="Top" Width="80" LostFocus="tb_schuhgr_LostFocus" KeyDown="tb_schuhgr_KeyDown"/>
         </Grid>
     </Grid>
 </Window>
