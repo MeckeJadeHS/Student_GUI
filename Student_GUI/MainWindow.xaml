@@ -36,10 +36,15 @@
         <Grid x:Name="grid_meer" HorizontalAlignment="Left" Height="190" Margin="155,92,0,0" VerticalAlignment="Top" Width="337" Visibility="Visible">
             <Label Content="Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="53"/>
             <TextBox HorizontalAlignment="Left" Height="23" Margin="68,10,0,0" TextWrapping="Wrap" Text="Heiner" VerticalAlignment="Top" Width="80"/>
-            <Label Content="MatNr" HorizontalAlignment="Left" Margin="166,7,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="247,10,0,0" TextWrapping="Wrap" Text="600452" VerticalAlignment="Top" Width="80"/>
-            <Label Content="Schuhgr" HorizontalAlignment="Left" Margin="166,48,0,0" VerticalAlignment="Top" Width="53"/>
-            <TextBox x:Name="tb_schuhgr" HorizontalAlignment="Left" Height="23" Margin="247,48,0,0" TextWrapping="Wrap" Text="42,0" VerticalAlignment="Top" Width="80" LostFocus="tb_schuhgr_LostFocus" KeyDown="tb_schuhgr_KeyDown"/>
+            <Label Content="MatNr" HorizontalAlignment="Left" Margin="166,10,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="247,13,0,0" TextWrapping="Wrap" Text="600452" VerticalAlignment="Top" Width="80"/>
+            <Label Content="Schuhgr" HorizontalAlignment="Left" Margin="166,41,0,0" VerticalAlignment="Top" Width="53"/>
+            <Label Content="Material" HorizontalAlignment="Left" Margin="166,72,0,0" VerticalAlignment="Top" Width="53"/>
+            <TextBox x:Name="tb_schuhgr" HorizontalAlignment="Left" Height="23" Margin="247,44,0,0" TextWrapping="Wrap" Text="42,0" VerticalAlignment="Top" Width="80" LostFocus="tb_schuhgr_LostFocus" KeyDown="tb_schuhgr_KeyDown"/>
+            <ComboBox x:Name="cd_Material" HorizontalAlignment="Left" Margin="247,76,0,0" VerticalAlignment="Top" Width="80">
+                <ComboBoxItem Content="Leder" HorizontalAlignment="Left" Width="92" Selected="ComboBoxItem_Selected_Leder"/>
+                <ComboBoxItem Content="Kunststoff" HorizontalAlignment="Left" Width="92" Selected="ComboBoxItem_Selected_Kunststoff"/>
+            </ComboBox>
         </Grid>
     </Grid>
 </Window>

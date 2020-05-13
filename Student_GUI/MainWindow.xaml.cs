@@ -112,5 +112,18 @@ namespace Student_GUI
             return res;
         }
 
+        private void ComboBoxItem_Selected_Leder(object sender, RoutedEventArgs e)
+        {
+            ComboBoxItem cbi = (ComboBoxItem)sender;
+            lab_testLabel.Content = cbi.Content;
+        }
+
+        private void ComboBoxItem_Selected_Kunststoff(object sender, RoutedEventArgs e)
+        {
+            ComboBoxItem cbi = (ComboBoxItem)sender;
+            lab_testLabel.Content = cbi.Content;
+//            ComboBoxItem cbi = (ComboBoxItem) cd_Material.SelectedItem;
+//            lab_testLabel.Content = cbi.Content;
+        }
     }
 }
